@@ -1,3 +1,12 @@
-// import models
+const User = require('./User');
+const Profile = require('./Profile');
 
-// module.exports 
+User.hasMany(Profile, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE',
+});
+
+Profile.belongsTo(User, {
+  foreignKey: 'user_id',
+});
+module.exports = { User, Profile };
