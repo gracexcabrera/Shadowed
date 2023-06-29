@@ -1,3 +1,7 @@
-// import models
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+// module.exports
 
-// module.exports 
+class Users extends Model {}
+
+Users.init({});
