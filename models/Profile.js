@@ -13,7 +13,36 @@ Profile.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    //   TBD
+    bio: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    gender: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    sexuality: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    likes:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 1,
+      validate: {
+        isNumeric: true,
+      }
+    },
+
+    // do i need this ??
+
+    // user_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "user",
+    //     key: "id"
+    //   }
+    // }
   },
   {
     sequelize,
