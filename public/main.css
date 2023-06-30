@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.no-button {
+    background-color: darkred;
+}
+
+
+.login {
+    background-color: darkred;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(97, 34, 34);
+    padding: 30px;
+}
