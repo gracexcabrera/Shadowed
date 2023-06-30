@@ -19,8 +19,8 @@ Tag.init(
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    // underscored:
-    // modelName:
+    underscored: true,
+    modelName: "tag",
   }
 );
 
