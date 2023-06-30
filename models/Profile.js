@@ -1,5 +1,5 @@
 // import parts of sequelize library
-const { Model, Dataypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
 
@@ -33,16 +33,13 @@ Profile.init(
         isNumeric: true,
       }
     },
-
-    // do i need this ??
-
-    // user_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: "user",
-    //     key: "id"
-    //   }
-    // }
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id"
+      }
+    }
   },
   {
     sequelize,
