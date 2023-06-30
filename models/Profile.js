@@ -5,14 +5,52 @@ const sequelize = require('../config/connection');
 
 class Profile extends Model {}
 
-Profile.init({
-  id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    primaryKey: true,
-    autoIncrement: true,
+Profile.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    bio: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    gender: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    sexuality: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    likes:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 1,
+      validate: {
+        isNumeric: true,
+      }
+    },
+
+    // do i need this ??
+
+    // user_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "user",
+    //     key: "id"
+    //   }
+    // }
   },
-  //   TBD
-});
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "profile",
+  }
+);
 
 module.exports = Profile;
