@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shadowed Love</title>
     <link rel="stylesheet" href="/css/jass.css">
-    <link rel="stylesheet" href="/css/style.css">
+    {{!--
+    <link rel="stylesheet" href="/css/profile.css"> --}}
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
@@ -14,10 +16,10 @@
         <header class="header">
             <nav>
                 {{#if logged_in}}
-                <a href="/homepage"></a> |
+                <a href="/homepage"></a>
                 <button class="no-button" id="logout">logout</button>
                 {{else}}
-                <a class="login" href="/login">login</a>
+                <button class="login" href="/login">login</button>
                 {{/if}}
             </nav>
         </header>
@@ -29,8 +31,9 @@
         </footer>
     </div>
 
-    {{if logged_in}}
+    {{#if logged_in}}
     <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
