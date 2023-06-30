@@ -6,17 +6,30 @@ body {
 
 .no-button {
     background-color: darkred;
+    display: block;
+    float: right;
+    text-align: right;
+    padding: 10px
 }
 
 
 .login {
     background-color: darkred;
+    display: block;
+    float: right;
+    text-align: right;
+    padding: 10px;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     background-color: rgb(97, 34, 34);
     padding: 30px;
+}
+
+#abc {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
 }
