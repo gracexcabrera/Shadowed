@@ -1,10 +1,6 @@
 const { Tag } = require('../models');
 
-const tagData = [
-    {
-
-}
-];
+const tagData = [{}];
 
 const seedTags = () => Tag.bulkCreate(tagData);
 
