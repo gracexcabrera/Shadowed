@@ -13,14 +13,6 @@ Profile.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    age: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 21,
-      validate: {
-        isNumeric: true,
-      }
-    },
     bio: {
       type: DataTypes.STRING,
       allowNull: false,
