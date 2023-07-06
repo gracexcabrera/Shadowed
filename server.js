@@ -5,10 +5,30 @@ const { createServer } = require('http');
 const path = require('path');
 const { Server } = require('socket.io');
 const hbs = exphbs.create();
+const session = require('express-session');
+const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {});
+
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {
+    maxAge: 300000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
+
+app.use(session(sess));
 
 const PORT = process.env.PORT || 3001;
 
@@ -46,7 +66,9 @@ io.on('connection', function (socket) {
     console.log('A user disconnected');
   });
 });
-
-httpServer.listen(PORT, () =>
+sequelize.sync({force: false}).then(()=>{
+  httpServer.listen(PORT, () =>
   console.log('Now listening on http://localhost:' + PORT)
 );
+
+})

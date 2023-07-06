@@ -1,6 +1,6 @@
 
 const router =require('express').Router();
-const {Tag, User, Profile, ProfileTag } = require('../../models');
+const {Tag, Profile, ProfileTag } = require('../../models');
 
 router.get('/', async (req, res) => {
     try {

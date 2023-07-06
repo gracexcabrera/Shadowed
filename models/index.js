@@ -1,6 +1,7 @@
 const User = require('./User');
 const Profile = require('./Profile');
 const ProfileTag = require('./Profile-Tag');
+const Tag = require('./Tag')
 
 User.hasOne(Profile, {
   foreignKey: 'user_id',
@@ -11,13 +12,13 @@ Profile.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
-Profile.hasMany(Tag, {
+Profile.belongsToMany(Tag, {
   foreignKey: 'profile_id',
   through: ProfileTag
 });
 
-Tag.hasMany(Profile, {
+Tag.belongsToMany(Profile, {
   foreignKey: 'tag_id',
   through: ProfileTag
 })
-module.exports = { User, Profile };
+module.exports = { User, Profile, ProfileTag, Tag };
