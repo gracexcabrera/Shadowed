@@ -20,21 +20,22 @@ User.init(
       autoIncrement: true,
     },
     username: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allNull: false,
     },
     password: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allNull: false,
     },
     email: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allNull: false,
     },
   },
   {
     hooks: {
       beforeCreate: async (newuserdata) => {
+        console.log(newuserdata);
         newuserdata.password = await bcrypt.hash(newuserdata.password, 10);
         return newuserdata;
       },

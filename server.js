@@ -66,9 +66,9 @@ io.on('connection', function (socket) {
     console.log('A user disconnected');
   });
 });
-sequelize.sync({force: false}).then(()=>{
+sequelize.sync({ force: false }).then(() => {
   httpServer.listen(PORT, () =>
-  console.log('Now listening on http://localhost:' + PORT)
-);
+    console.log('Now listening on http://localhost:' + PORT)
+  );
 
 })
