@@ -3,6 +3,7 @@ const { Profile } = require('../models');
 const profileData = [
   {
     profile_name: 'Cecilia Ryan',
+    age: 32,
     bio: 'Animal lover 🐶🐱 and nature enthusiast 🌳',
     gender: 'female',
     sexuality: 'straight',
@@ -10,7 +11,8 @@ const profileData = [
     user_id: 1,
   },
   {
-    profile_name: '',
+    profile_name: 'Eileen Moore',
+    age: 25,
     bio: 'Pastry chef 🧁and coffee enthusiast ☕',
     gender: '',
     sexuality: 'pansexual',
@@ -18,7 +20,8 @@ const profileData = [
     user_id: 2,
   },
   {
-    profile_name: '',
+    profile_name: 'Angelina McClure',
+    age: 24,
     bio: 'Not looking for a partner, just looking to connect with people and make new friends!',
     gender: 'female',
     sexuality: 'asexual',
@@ -26,7 +29,8 @@ const profileData = [
     user_id: 3,
   },
   {
-    profile_name: '',
+    profile_name: 'Zaynab Sawyer',
+    age: 30,
     bio: 'Looking for someone to watch every Harry Potter movie with',
     gender: 'non-binary',
     sexuality: 'bisexual',
@@ -34,7 +38,8 @@ const profileData = [
     user_id: 4,
   },
   {
-    profile_name: '',
+    profile_name: 'Abraham Hunter',
+    age: 36,
     bio: 'Im not really good at bios 🤷‍♂️',
     gender: 'male',
     sexuality: 'straight',
