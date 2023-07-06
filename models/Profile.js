@@ -14,12 +14,12 @@ Profile.init(
       autoIncrement: true,
     },
     age: {
+      // age has to be 21 or over
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 21,
       validate: {
-        isNumeric: true,
-      }
+        min: 23,
+      },
     },
     bio: {
       type: DataTypes.STRING,
