@@ -12,6 +12,14 @@ const io = new Server(httpServer, {});
 
 const PORT = process.env.PORT || 3001;
 
+// added by chris
+
+const userRouter = require('./routes/users')
+
+app.use('/users', userRouter)
+
+// added by chris
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
