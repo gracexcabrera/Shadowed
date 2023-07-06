@@ -3,8 +3,8 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const { createServer } = require('http');
 const path = require('path');
-const { server } = require('socket.io');
-const hbs = exphbs.create({});
+const { Server } = require('socket.io');
+const hbs = exphbs.create();
 
 const app = express();
 const httpServer = createServer(app);
@@ -23,6 +23,8 @@ app.use('/users', userRouter)
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
