@@ -16,6 +16,7 @@ async function loginFormHandler(event) {
     console.log(response)
     if (response.ok) {
       document.location.replace('/');
+      document.location.replace('/homepage');
     } else {
       alert(response.statusText);
     }
