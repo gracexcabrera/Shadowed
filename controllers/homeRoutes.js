@@ -1,8 +1,8 @@
 const router = require('express').Router();
 // const { Profile, User } = require('../models');
-// const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
         res.render("homepage")
 
@@ -20,7 +20,7 @@ router.get('/login', async (req, res) => {
     }
 })
 
-router.get('/create', async (req, res) => {
+router.get('/create', withAuth, async (req, res) => {
     try {
         res.render("createprofile")
 
@@ -29,7 +29,7 @@ router.get('/create', async (req, res) => {
     }
 })
 
-router.get('/profile/:id', async (req, res) => {
+router.get('/profile/:id',withAuth, async (req, res) => {
     try {
         const profileData = await Profile.findByPk({
             include: [
