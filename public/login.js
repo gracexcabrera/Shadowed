@@ -13,10 +13,10 @@ async function loginFormHandler(event) {
       }),
       headers: { 'Content-Type': 'application/json' },
     });
-    console.log(response)
+    console.log(response);
     if (response.ok) {
       document.location.replace('/');
-      document.location.replace('/homepage');
+      // document.location.replace('/homepage');
     } else {
       alert(response.statusText);
     }

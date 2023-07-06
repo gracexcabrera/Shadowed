@@ -1,2 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
+.form-input {
+    background-color: dimgray;
+    height: 40px;
+    width: 300px;
+    margin-bottom: 10px;
+    /* justify-content: space-between; */
+    font-size: 23px;
+    display: inline-block;
+
+}
+
+.btn-primary {
+
+    padding: 10px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 20px;
+
+}

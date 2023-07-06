@@ -6,7 +6,7 @@ const chatInputEl = byId('chat-input');
 const submitChatEl = byId('submit-chat-input');
 
 // If you have your own users there is no need for getName()... just replace all references with equivalents from your user.
-// const userName = getName();
+const userName = getName();
 
 const updateHTML = (name, chat, sent) => {
   chatDialogEl.innerHTML += `
