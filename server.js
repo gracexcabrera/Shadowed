@@ -33,7 +33,11 @@ app.use(session(sess));
 const PORT = process.env.PORT || 3001;
 
 
+// const userRouter = require('./routes/users')
 
+// app.use('/users', userRouter)
+
+// added by chris
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
