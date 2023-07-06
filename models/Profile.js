@@ -18,7 +18,7 @@ Profile.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        min: 23,
+        min: 21,
       },
     },
     bio: {
