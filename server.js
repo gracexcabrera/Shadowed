@@ -34,9 +34,9 @@ const PORT = process.env.PORT || 3001;
 
 // added by chris
 
-const userRouter = require('./routes/users')
+// const userRouter = require('./routes/users')
 
-app.use('/users', userRouter)
+// app.use('/users', userRouter)
 
 // added by chris
 
