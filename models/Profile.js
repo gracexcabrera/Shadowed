@@ -21,6 +21,7 @@ Profile.init(
         min: 21,
       },
     },
+
     bio: {
       type: DataTypes.STRING,
       allowNull: false,
