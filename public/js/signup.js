@@ -18,7 +18,7 @@ async function signUpFormHandler(event) {
     });
     if (response.ok) {
       console.log('You have successfully signed up!');
-      document.location.replace('/');
+      document.location.replace('/create');
     } else {
       alert(response.statusText);
     }
