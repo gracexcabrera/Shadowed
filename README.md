@@ -16,6 +16,11 @@
 ## Usage
   This site can be used to connect with and create bonds with people who share the same interests as you.As we as connect you with a new and fun community, full of people who are also dead inside As for the code it can be used as an example of how to create a full stack web application.
   
+## ![Picture of login](/images/2023-07-06%20(4).png)
+## ![Picture of homepage](/images/2023-07-06%20(2).png)
+## ![Picture of create](/images/2023-07-06%20(6).png)
+
+
 ## License
   MIT License
   
