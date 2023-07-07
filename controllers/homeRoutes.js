@@ -7,7 +7,7 @@ router.get('/', withAuth, async (req, res) => {
         res.render("homepage")
 
     } catch (error) {
-        res.status(500).json(err);
+        res.status(500).json(error);
     }
 })
 
@@ -16,7 +16,7 @@ router.get('/login', async (req, res) => {
         res.render("login")
 
     } catch (error) {
-        res.status(500).json(err);
+        res.status(500).json(error);
     }
 })
 
@@ -25,7 +25,7 @@ router.get('/create', withAuth, async (req, res) => {
         res.render("createprofile")
 
     } catch (error) {
-        res.status(500).json(err);
+        res.status(500).json(error);
     }
 })
 
@@ -46,7 +46,7 @@ router.get('/profile/:id',withAuth, async (req, res) => {
             logged_in: req.session.logged_in
         });
     } catch (error) {
-        res.status(500).json(err);
+        res.status(500).json(error);
     }
 })
 

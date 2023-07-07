@@ -5,7 +5,7 @@ async function createProfile() {
   });
 
   if (response.ok) {
-    document.location.replace('/');
+    document.location.replace('/profile/:id');
   } else {
     alert(response.statusText);
   }
