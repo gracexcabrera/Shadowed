@@ -15,7 +15,7 @@ body {
 
 h1 {
     font-family: 'Great Vibes', cursive;
-    color: black;
+    color: rgb(100, 5, 5);
     display: inline;
     float: right;
     margin: 0px;
@@ -23,6 +23,7 @@ h1 {
 }
 
 .no-button {
+    font-family: 'Great Vibes', cursive;
     background-color: rgb(47, 3, 3);
     display: block;
     float: right;
