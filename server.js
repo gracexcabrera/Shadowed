@@ -32,7 +32,6 @@ app.use(session(sess));
 
 const PORT = process.env.PORT || 3001;
 
-// added by chris
 
 // const userRouter = require('./routes/users')
 
